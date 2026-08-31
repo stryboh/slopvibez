@@ -1,0 +1,52 @@
+{
+  "name": "slopvibez",
+  "version": "1.0.0",
+  "description": "Minimal terminal chat for local AI models",
+  "type": "module",
+  "main": "dist/slopvibez.js",
+  "bin": {
+    "slopvibez": "dist/slopvibez.js"
+  },
+  "files": [
+    "dist/",
+    "config.toml",
+    "scripts/postinstall.js"
+  ],
+  "scripts": {
+    "build": "bun build bin/slopvibez.ts --outdir dist --target node",
+    "prepublishOnly": "bun run build",
+    "postinstall": "node scripts/postinstall.js",
+    "lint": "biome check src/ bin/",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "keywords": [
+    "ai",
+    "chat",
+    "terminal",
+    "tui",
+    "llm",
+    "local"
+  ],
+  "author": "stryboh",
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.11",
+    "@types/bun": "latest",
+    "@types/node": "^26.4.0",
+    "@types/react": "^19.2.18"
+  },
+  "peerDependencies": {
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@inkkit/ink-markdown": "^1.0.0",
+    "ink": "^7.1.1",
+    "ink-text-input": "^6.0.0",
+    "react": "^19.2.8",
+    "react-devtools-core": "^7.0.1",
+    "smol-toml": "^1.8.0"
+  }
+}
