@@ -1,6 +1,6 @@
 {
   "name": "slopvibez",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal terminal chat for local AI models",
   "type": "module",
   "main": "dist/slopvibez.js",
@@ -20,7 +20,7 @@
     "typecheck": "tsc --noEmit"
   },
   "engines": {
-    "bun": ">=1.0.0"
+    "node": ">=20.11.0"
   },
   "keywords": [
     "ai",
